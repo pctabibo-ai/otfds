@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtholaTFDS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="index.html" title="Othola TFDS — página inicial">
+                <img src="assets/logotipo.jpg" alt="Logótipo Othola TFDS">
+                <span>Othola TFDS</span>
+            </a>
+            <ul>
+                <li><a href="index.html" class="btnmenu" title="Ir para a página inicial">Início</a></li>
+                <li><a href="sobre.html" title="Saber mais sobre a Othola TFDS">Sobre</a></li>
+                <li><a href="servicos.html" title="Conhecer os nossos serviços">Serviços</a></li>
+                <li><a href="benservicos.html" title="Ver a lista de bens e serviços fornecidos">Bens-Serviços</a></li>
+                <li><a href="contactos.html" title="Entrar em contacto connosco">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>OtholaTFDS</h1>
+        <p>Este projecto consiste na página web de uma empresa que pretende
+            estabelecer-se no mercado e iniciar as suas actividades empresarias,
+            de modo a satisfazer as necessidades dos clientes e começar a produzir
+            para poder impulsionar o seu negócio.</p>
+
+        <a class="botao botao-cheio" href="servicos.html">Ver os nossos serviços</a>
+        <a class="botao botao-contorno" href="https://www.apolitecnica.ac.mz/imep/" target="_blank" rel="noopener noreferrer">Visitar o site do IMEP</a>
+        <a class="botao botao-cheio" href="Sobre OTFDS.docx" download="OTFDS.docx">Baixar o projecto OTFDS</a>
+
+        <div class="media-grelha">
+            <div class="caixa">
+                <h2>Vídeo de boas-vindas</h2>
+                <figure>
+                <video id="video-boas-vindas" controls>
+                    <source src="assets/welcome.mp4#t=0,6" type="video/mp4">
+                    O seu navegador não suporta a reprodução deste vídeo.
+                </video>
+                <figcaption>Vídeo de boas-vindas ao site da OtholaTFDS (primeiros 6 segundos).</figcaption>
+                </figure>
+            </div>
+
+            <div class="caixa">
+                <h2>Mensagem áudio</h2>
+                <figure>
+                <audio controls>
+                    <source src="assets/Otfds.m4a" type="audio/mp4">
+                    O seu navegador não suporta a reprodução deste áudio.
+                </audio>
+                <figcaption>Áudio de saudação e boas-vindas ao site da OtholaTFDS.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Limita a reprodução do vídeo de boas-vindas aos primeiros 6 segundos
+        const videoBoasVindas = document.getElementById('video-boas-vindas');
+        if (videoBoasVindas) {
+            videoBoasVindas.addEventListener('timeupdate', () => {
+                if (videoBoasVindas.currentTime >= 6) {
+                    videoBoasVindas.pause();
+                    videoBoasVindas.currentTime = 6;
+                }
+            });
+        }
+    </script>
+
+    <footer>
+        © 2024 Othola Technology, Finance and Data Science, LDA — Maputo, Moçambique
+    </footer>
+</body>
+</html>
+
+
+ 
